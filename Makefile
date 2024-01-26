@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=databag
-PKG_VERSION:=1.1.32
+PKG_VERSION:=1.1.11
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL_FILE:=server.tar.gz
-PKG_SOURCE_URL:=https://github.com/balzack/databag-openwrt/releases/download/v$(PKG_VERSION)/
+PKG_SOURCE_URL:=https://github.com/balzack/databag/releases/download/v$(PKG_VERSION)/
 PKG_HASH:=cf513ae347432dcabc151e4e5eeb4277096645dae7593c4317a25f9f19730577
 
 PKG_MAINTAINER:=Roland Osborne <roland.osborne@gmail.com>
@@ -26,7 +26,7 @@ include $(INCLUDE_DIR)/package.mk
 include ../../lang/golang/golang-package.mk
 
 define Download/static_web
-	URL:=https://github.com/balzack/databag-openwrt/releases/download/v$(PKG_VERSION)
+	URL:=https://github.com/balzack/databag/releases/download/v$(PKG_VERSION)
 	URL_FILE:=webapp.tar.gz
 	FILE:=$(PKG_NAME)-$(PKG_VERSION)-webapp.tar.gz
 	HASH:=781731e7b72c29ad69942ec6e5f7f0a0a5897882591908c8e790db331f647fd3
