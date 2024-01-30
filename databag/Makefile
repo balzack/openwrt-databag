@@ -7,7 +7,7 @@ PKG_RELEASE:=1
 PKG_SOURCE:=$(PKG_NAME)-v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL_FILE:=server.tar.gz
 PKG_SOURCE_URL:=https://github.com/balzack/databag/releases/download/v$(PKG_VERSION)/
-PKG_HASH:=cf513ae347432dcabc151e4e5eeb4277096645dae7593c4317a25f9f19730577
+PKG_HASH:=5a6da1c00b0e15edc1cdb11f623efc76cb09a9a926d5441e469483941ae4dde3
 
 PKG_MAINTAINER:=Roland Osborne <roland.osborne@gmail.com>
 PKG_LICENSE:=Apache-2.0
@@ -20,6 +20,7 @@ PKG_BUILD_FLAGS:=no-mips16
 
 UNPACK_CMD=tar xf "$(DL_DIR)/$(PKG_SOURCE)" -C $(1)
 
+TARGET_CFLAGS += "-D_LARGEFILE64_SOURCE"
 GO_PKG:=databag
 
 include $(INCLUDE_DIR)/package.mk

@@ -9,7 +9,7 @@ config_databag() {
  
   mkdir -p "${store_path}/assets"
   cp -n /opt/databag/databag.db ${store_path}
-  /usr/bin/databag ${service_port} ${store_path} 
+  /usr/bin/databag -p ${service_port} -s ${store_path} -w /opt/databag/web
 }
 
 start() {
