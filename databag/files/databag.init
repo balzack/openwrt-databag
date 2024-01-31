@@ -13,7 +13,7 @@ config_databag() {
 }
 
 start() {
-	config_load databag
+  config_load databag
   config_foreach config_databag databag
 }
 
