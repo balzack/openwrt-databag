@@ -5,7 +5,7 @@ PKG_VERSION:=1.1.11
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-v$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL_FILE:=server2.tar.gz
+PKG_SOURCE_URL_FILE:=server.tar.gz
 PKG_SOURCE_URL:=https://github.com/balzack/databag/releases/download/v$(PKG_VERSION)/
 PKG_HASH:=b4f9b46ffc9810156c6b8e50216ee4b703b5967a3a88acd982e0ce9ee42098e4
 
@@ -28,7 +28,7 @@ include ../../lang/golang/golang-package.mk
 
 define Download/static_web
 	URL:=https://github.com/balzack/databag/releases/download/v$(PKG_VERSION)
-	URL_FILE:=webapp2.tar.gz
+	URL_FILE:=webapp.tar.gz
 	FILE:=$(PKG_NAME)-$(PKG_VERSION)-webapp.tar.gz
 	HASH:=9a9a4332a4837e356b3815fec3aacf5099d8a11dfcdad83847790d235101fa05
 endef
