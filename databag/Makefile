@@ -5,9 +5,9 @@ PKG_VERSION:=1.1.11
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-v$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL_FILE:=server.tar.gz
+PKG_SOURCE_URL_FILE:=server2.tar.gz
 PKG_SOURCE_URL:=https://github.com/balzack/databag/releases/download/v$(PKG_VERSION)/
-PKG_HASH:=5a6da1c00b0e15edc1cdb11f623efc76cb09a9a926d5441e469483941ae4dde3
+PKG_HASH:=b4f9b46ffc9810156c6b8e50216ee4b703b5967a3a88acd982e0ce9ee42098e4
 
 PKG_MAINTAINER:=Roland Osborne <roland.osborne@gmail.com>
 PKG_LICENSE:=Apache-2.0
@@ -28,9 +28,9 @@ include ../../lang/golang/golang-package.mk
 
 define Download/static_web
 	URL:=https://github.com/balzack/databag/releases/download/v$(PKG_VERSION)
-	URL_FILE:=webapp.tar.gz
+	URL_FILE:=webapp2.tar.gz
 	FILE:=$(PKG_NAME)-$(PKG_VERSION)-webapp.tar.gz
-	HASH:=781731e7b72c29ad69942ec6e5f7f0a0a5897882591908c8e790db331f647fd3
+	HASH:=9a9a4332a4837e356b3815fec3aacf5099d8a11dfcdad83847790d235101fa05
 endef
 
 define Package/databag/install
